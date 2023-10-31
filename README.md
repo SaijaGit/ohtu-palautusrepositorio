@@ -1,2 +1,2 @@
-# ohtu-palautusrepositorio
-Kurssin TKT20006 Ohjelmistotuotanto 2023 palautusrepositorio
+# ohtu-s23-palautukset
+https://github.com/SaijaGit/ohtuvarasto

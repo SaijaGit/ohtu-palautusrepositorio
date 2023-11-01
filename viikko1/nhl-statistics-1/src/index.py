@@ -20,7 +20,7 @@ def main():
         print(player)
 
     # metodi toimii samalla tavalla kuin yo. kutsu myös ilman toista parametria
-    for player in stats.top(10, SortBy.POINTS):
+    for player in stats.top(10):
         print(player)
 
     # järjestetään maalien perusteella

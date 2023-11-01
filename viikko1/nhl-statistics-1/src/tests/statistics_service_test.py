@@ -54,7 +54,7 @@ class TestStatisticsService(unittest.TestCase):
         
     def test_player_sort_by_points(self):
         team_test = []
-        for player in self.stats.top(1, SortBy.POINTS):
+        for player in self.stats.top(2, SortBy.POINTS):
             team_test.append(str(player))
 
         team_compare = [
@@ -67,7 +67,7 @@ class TestStatisticsService(unittest.TestCase):
 
     def test_player_sort_by_goals(self):
         team_test = []
-        for player in self.stats.top(4, SortBy.GOALS):
+        for player in self.stats.top(5, SortBy.GOALS):
             team_test.append(str(player))
         
         team_compare = [
@@ -83,7 +83,7 @@ class TestStatisticsService(unittest.TestCase):
 
     def test_player_sort_by_assists(self):
         team_test = []
-        for player in self.stats.top(3, SortBy.ASSISTS):
+        for player in self.stats.top(4, SortBy.ASSISTS):
             team_test.append(str(player))
         
         team_compare = [
@@ -91,6 +91,22 @@ class TestStatisticsService(unittest.TestCase):
             str(Player("Freezerman", "DET", 42, 56)),
             str(Player("Lemueux", "PIT", 45, 54)),
             str(Player("Curry", "EDM", 37, 53))
+        ]
+
+        self.assertListEqual(team_test, team_compare)
+
+
+    def test_player_sort_too_many(self):
+        team_test = []
+        for player in self.stats.top(50):
+            team_test.append(str(player))
+        
+        team_compare = [
+            str(Player("Greyzky", "EDM", 35, 89)),
+            str(Player("Lemueux", "PIT", 45, 54)),
+            str(Player("Freezerman", "DET", 42, 56)),
+            str(Player("Curry", "EDM", 37, 53)),
+            str(Player("Sevenkorv", "EDM", 4, 12))
         ]
 
         self.assertListEqual(team_test, team_compare)

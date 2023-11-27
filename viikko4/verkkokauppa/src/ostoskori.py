@@ -6,9 +6,15 @@ class Ostoskori:
         self._tuotteet.append(tuote)
     
     def poista(self, tuote):
-        self._tuotteet = list(
-            filter(lambda t: t.id != tuote.id, self._tuotteet)
-        )
+        paikka = -1
+        for i, t in enumerate(self._tuotteet):
+            if t == tuote:
+                paikka = i
+                break
+
+        if paikka != -1:
+            self._tuotteet.pop(paikka)
+
 
     def hinta(self):
         hinnat = map(lambda t: t.hinta, self._tuotteet)

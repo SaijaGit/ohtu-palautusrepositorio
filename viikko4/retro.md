@@ -4,4 +4,4 @@ Retrospektiivimenetelmän "Start, Stop, Continue, More of, Less of Wheel" idea o
 
 Menetelmässä  ”Glad, Sad, Mad” osallistujat kirjoittavat kommenttinsa ja mielipiteensä sprintin sujumisesta erillisille korteille. Esille nousseet asiat jaetaan positiivisiin ja negatiivisiin tiimin toimintaa koskeviin kommentteihin, sekä yleisempiin. Sen jälkeen äänestetään missä järjestyksessä näistä asioista keskustellaan, ja keskustelua jatketaan, kunnes kaikki on käsitelty tai aika loppuu. 
 
-t. 6 commit 1, 2
+
